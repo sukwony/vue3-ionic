@@ -1,10 +1,17 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <ion-app>
+    <ion-router-outlet/>
+  </ion-app>
 </template>
+
+<script lang="ts">
+import { IonApp, IonRouterOutlet } from '@ionic/vue'
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  components: { IonApp, IonRouterOutlet }
+})
+</script>
 
 <style lang="scss">
 #app {
